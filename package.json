@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "nyc blue-tape -r babel-register 'tests/**/*.js' | tap-spec",
+    "test": "nyc tape -r babel-register 'tests/**/*.js' | tap-spec",
     "test:watch": "nodemon -q -x 'npm run test'",
     "lint": "eslint '/tests/**/*.js'",
     "make:docs": "./node_modules/.bin/jsdoc -c ./conf.json -r"
